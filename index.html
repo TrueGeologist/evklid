@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Евклид - Проектные системы</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <!-- Montserrat 400, 600, 700, 800 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <button class="header__burger" type="button">
+          <svg class="header__burger-img" width="30" height="23" viewbox="0 0 30 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect class="burger__rect-1" width="30" height="3"/>
+            <rect class="burger__rect-2" y="10" width="30" height="3"/>
+            <rect class="burger__rect-3" y="20" width="30" height="3"/>
+          </svg>
+        </button>
+
+        <a href="#" class="header__logo">
+          <picture class="header__logo-img">
+            <source srcset="./img/320/logo.png" media="(max-width: 320px)">
+            <source srcset="./img/1024/logo.png" media="(max-width: 1024px)">
+            <img src="./img/logo.png" alt="Логотип Евклид - Проектные системы. Изображение циркуля">
+          </picture>
+        </a>
+
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-list__item nav-list__item-about">
+              <a class="nav-list__link" href="#">О нас</a>
+            </li>
+
+            <li class="nav-list__item nav-list__item-projects">
+              <a class="nav-list__link" href="#">Проекты</a>
+            </li>
+
+            <li class="nav-list__item nav-list__item-stages">
+              <a class="nav-list__link" href="#">Этапы</a>
+            </li>
+
+            <li class="nav-list__item nav-list__item-reviews">
+              <a class="nav-list__link" href="#">Отзывы</a>
+            </li>
+
+            <li class="nav-list__item nav-list__item-contacts">
+              <a class="nav-list__link" href="#">Контакты</a>
+            </li>
+
+            <li>
+              <a href="#" class="nav-list__item__search-logo nav-list__link">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="19.5138" y="18.5495" width="8" height="2" transform="rotate(45 19.5138 18.5495)" fill="currentColor"/>
+                  <circle cx="11.5" cy="11.5" r="10.5" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <a href="#" class="nav-list__item__search-logo-1024">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="19.5138" y="18.5495" width="8" height="2" transform="rotate(45 19.5138 18.5495)" fill="currentColor"/>
+            <circle cx="11.5" cy="11.5" r="10.5" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-hero">
+        <div class="container hero__container">
+          <div class="hero__image-container">
+            <h1 class="hero__heading">
+              Проектные решения
+              <br>
+              любой сложности
+            </h1>
+
+            <p class="hero__content">
+              Есть над чем задуматься: базовые сценарии поведения
+              <br>
+              пользователей и по сей день остаются уделом проектантов
+            </p>
+
+            <a class="hero__button" href="#">
+              Заказать расчёт
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-about">
+        <div class="container section-about__container">
+          <h2 class="section-about__heading">
+            О нас
+          </h2>
+
+          <p class="section-about__description">
+            Также как перспективное планирование создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса экспериментов, поражающих по своей масштабности и грандиозности. А также диаграммы связей могут быть описаны максимально подробно. Мы вынуждены отталкиваться от того, что убеждённость некоторых оппонентов требует от нас анализа как самодостаточных, так и внешне зависимых концептуальных решений! Следует отметить, что высококачественный прототип
+            <span class="section-about__description__i"> </span>
+            будущего проекта предопределяет высокую востребованность позиций, занимаемых участниками в отношении поставленных задач. Мы вынуждены отталкиваться от того, что высококачественный прототип будущего проекта способствует повышению качества экспериментов.
+          </p>
+
+          <div class="section-about__cards">
+            <div class="section-about__more">
+              <div class="section-about__more__image-content">
+                <p class="section-about__more__image-text">Принимая во внимание показатели успешности, перспективное планирование способствует подготовке и реализации новых принципов.</p>
+                
+                <a class="section-about__more__image-link" href="#">Подробнее</a>
+              </div>
+            </div>
+
+            <div class="section-about__more__image-content-320">
+              <p class="section-about__more__image-text">Принимая во внимание показатели успешности, перспективное планирование способствует подготовке и реализации новых принципов.</p>
+              
+              <a class="section-about__more__image-link" href="#">Подробнее</a>
+            </div>
+  
+            <ul class="section-about__list">
+              <li class="section-about__item section-about__item-consult">
+                <div class="section-about__item-image section-about__item-image__consult"></div>
+
+                <div class="section-about__content">
+                  <h3 class="section-about__item-heading">
+                    Консультация с широким активом
+                  </h3>
+    
+                  <p class="section-about__text">
+                    А также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для как самодостаточных, так и внешне зависимых концептуальных решений.
+                  </p>
+                </div>
+              </li>
+  
+              <li class="section-about__item section-about__item-quality">
+                <div class="section-about__item-image section-about__item-image__quality"></div>
+
+                <div class="section-about__content section-about__content__quality">
+                  <h3 class="section-about__item-heading">
+                    В своём стремлении повысить
+                  </h3>
+    
+                  <p class="section-about__text">
+                    Качество жизни, они забывают, что сплочённость команды профессионалов представляет собой интересный эксперимент проверки прогресса профессионального сообщества. 
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-work">
+        <div class="container section-work__container">
+          <h2 class="section-work__heading">
+            Как мы работаем
+          </h2>
+
+          <ul class="section-work__list">
+            <li class="section-work__item">
+              <a class="section-work__link first__step__link" href="#">1 шаг</a>
+            </li>
+
+            <li class="section-work__item">
+              <a class="section-work__link" href="#">2 шаг</a>
+            </li>
+
+            <li class="section-work__item">
+              <a class="section-work__link" href="#">3 шаг</a>
+            </li>
+
+            <li class="section-work__item">
+              <a class="section-work__link" href="#">4 шаг</a>
+            </li>
+          </ul>
+
+          <picture class="step-content__image-768">
+            <source class="step-content__image-320" srcset="./img/320/Rectangle-18.png" media="(max-width: 320px)">
+            <source srcset="./img/768/Rectangle18.jpg" media="(max-width: 768px)">
+            <img class="step-content__image-1920" src="./img/Rectangle-18.jpg" alt="Фотография стола с двумя ноутбуками и листками, на которых что-то пишут два мужчины">
+          </picture>
+
+          <div class="step-content">
+            <div class="step-content__text">
+              <h2 class="step-content__heading">
+                Проводим консультацию
+              </h2>
+    
+              <p class="step-content__description">
+                Влечет за собой процесс внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований. Кстати,  стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, призваны к ответу.
+              </p>
+
+              <div class="step-content__buttons">
+                <a class="step-content__more" href="">
+                  Подробнее
+                </a>
+    
+                <a class="step-content__contract" href="">
+                  Договор
+                </a>
+              </div>
+            </div>
+
+            <picture class="step-content__image">
+              <source class="step-content__image-1024" srcset="./img/1024/Rectangle-18.png" media="(max-width: 1350px)">
+              <img class="step-content__image-1920" src="./img/Rectangle-18.jpg" alt="Фотография стола с двумя ноутбуками и листками, на которых что-то пишут два мужчины">
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-FAQ">
+        <div class="container section-FAQ__container">
+          <h2 class="section-FAQ__heading">
+            Часто задаваемые вопросы
+          </h2>
+
+          <ul class="section-FAQ__list">
+            <li class="section-FAQ__item">
+              <div class="section-FAQ__item__text">
+                Из чего формируется 
+                <br class="section-FAQ__item__text-br-320">
+                конечная стоимость проекта?
+              </div>
+
+              <button class="section-FAQ__item__button"></button>
+            </li>
+
+            <li class="section-FAQ__item">
+              <div class="section-FAQ__item__text section-FAQ__item__text__m-30">
+                У меня есть свой проект. 
+                <br class="section-FAQ__item__text-br-320">
+                Сможем ли мы его 
+                <br class="section-FAQ__item__text-br-768 section-FAQ__item__text-br-320">
+                доработать 
+                <span class="slash">/</span> 
+                <br class="section-FAQ__item__text-br-1024">
+                реализовать?
+              </div>
+
+              <button class="section-FAQ__item__button" type="button"></button>
+            </li>
+
+            <li class="section-FAQ__item">
+              <div class="section-FAQ__item__text">
+                Я выбираю между разными компаниями. 
+                <br class="section-FAQ__item__text-br-768">
+                В чём ваше 
+                <br class="section-FAQ__item__text-br-320">
+                отличие?
+              </div>
+
+              <button class="section-FAQ__item__button"></button>
+            </li>
+
+            <li class="section-FAQ__item">
+              <div class="section-FAQ__item__text section-FAQ__item__text__m-30">
+                Могу ли я делегировать вам работу 
+                <span class="slash">/</span> 
+                <br class="section-FAQ__item__text-br-768">
+                согласование с подрядчиком 
+                <span class="slash">/</span> 
+                организацией? 
+              </div>
+
+              <button class="section-FAQ__item__button"></button>
+            </li>
+
+            <li class="section-FAQ__item">
+              <div class="section-FAQ__item__text">
+                Могу ли я вернуть деньги на каком-либо из 
+                <br class="section-FAQ__item__text-br-768">
+                этапов работ?
+              </div>
+
+              <button class="section-FAQ__item__button"></button>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <footer class="footer">
+       <div class="container footer__container">
+          <div class="footer__left-col">
+            <img class="footer__logo" src="./img/footer-logo.png" alt="Логотип Евклид - Проектные системы. Изображение циркуля">
+
+            <nav class="footer__nav">
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#">О нас</a>
+                </li>
+                  
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#">Проекты</a>
+                </li>
+
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#">Отзывы</a>
+                </li>
+
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#">Договор оферты</a>
+                </li>
+
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link"  href="#">Договор подряда</a>
+                </li>
+
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#">Конфиденциальность</a>
+                </li>
+
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#">Партнёрское&nbsp;соглашение</a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="footer__social">
+              <a class="facebook-link footer__social-icon" href=""></a>
+              <a class="vk-link footer__social-icon" href=""></a>
+              <a class="insta-link footer__social-icon" href=""></a>
+            </div>
+          </div>
+
+          <div class="footer__center-col">
+            <h2 class="footer__heading">
+              Оставить заявку
+            </h2>
+
+            <form class="footer__form" id="application" action="#" method="post">
+              <input class="footer__input-name" type="text" name="user-name" id="name" required placeholder="Фамилия, имя и отчество*">
+              <input class="footer__input-email" type="email" name="user-email" id="email" required placeholder="E-mail*">
+              <textarea class="footer__textarea" name="message" id="message" cols="30" rows="10" placeholder="Сообщение"></textarea>
+              
+              <div class="footer__form-submit">
+                <button class="footer__form-submit-button" type="submit">
+                  Отправить данные
+                </button>
+
+                <div class="checkbox">
+                  <input class="footer__form-checkbox" type="checkbox" name="check" id="check" required checked>
+                  <label class="footer__checkbox-label" for="check">Согласен на обработку данных</label>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="footer__right-col">
+            Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: разбавленное изрядной долей эмпатии, рациональное мышление позволяет оценить значение модели развития. Таким образом, консультация с широким активом обеспечивает широкому кругу (специалистов) участие в формировании стандартных подходов.
+          </div>
+
+          <div class="footer__lower-768">
+            <picture class="footer__logo">
+              <source class="footer__logo-320" srcset="./img/320/footer-logo.png" media="(max-width: 320px)">
+
+              <img class="footer__logo-1920" src="./img/footer-logo.png" alt="Логотип Евклид - Проектные системы. Изображение циркуля">
+            </picture>
+
+            <div class="footer__social">
+              <a class="facebook-link footer__social-icon" href=""></a>
+              <a class="vk-link footer__social-icon" href=""></a>
+              <a class="insta-link footer__social-icon" href=""></a>
+            </div>
+          </div>
+       </div>
+      </footer>
+    </main>
+  </body>
+</html>
