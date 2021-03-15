@@ -20,6 +20,10 @@
   box-sizing: border-box;
 }
 
+body {
+  position: relative;
+}
+
 a {
   text-decoration: none;
 }
@@ -54,6 +58,14 @@ p{
   margin: 0 auto;
 }
 
+button {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
 .container {
   padding: 0 75px;
   max-width: 1920px;
@@ -72,6 +84,22 @@ p{
 
 .header__burger {
   display: none;
+}
+
+.burger__menu {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  display: block;
+  display: flex;
+  flex-direction: column;
+  padding: 39px 221px 220px 50px;
+  width: 420px;
+  height: 768px;
+  background: var(--colorFF);
+  transition: transform .3s ease-in-out;
+  transform: translateX(-101%);
 }
 
 .header__logo {
@@ -144,15 +172,66 @@ p{
 }
 
 .hero__container {
+  position: relative;
   background: var(--colorF0); /* Для старых браузров */
   background: linear-gradient(var(--colorF0), var(--colorFF));
 }
 
+.swiper-container {
+  height: 620px;
+}
+
 .hero__image-container {
-  padding: 103px 78px 91px 78px;
-  color: var(--colorFF);
-  background: url(../img/low-angle-photo-of-balconies.jpg) no-repeat center;
+  background: url(../img/hero-1.jpg) no-repeat center;
   background-size: cover;
+}
+
+.hero__image-container-2 {
+  background: url(../img/hero-2.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.hero__image-container-3 {
+  background: url(../img/hero-3.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.swiper-pagination-bullet {
+  width: 15px !important;
+  height: 15px !important;
+}
+
+.swiper-pagination-bullet:hover {
+  border: 1px solid var(--colorFF);
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--colorFF) !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: var(--color66);
+  transition: color .3s;
+}
+
+.swiper-button-prev:hover::after,
+.swiper-button-next:hover::after {
+  color: var(--colorHover);
+}
+
+.swiper-button-prev:active::after,
+.swiper-button-next:active::after {
+  color: var(--colorActive);
+}
+
+.hero__text {
+  position: absolute;
+  padding: 103px 78px 91px 78px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  color: var(--colorFF);
 }
 
 .hero__heading {
@@ -345,24 +424,32 @@ p{
   margin-right: 96px;
 }
 
-.section-work__link {
+.section-work__btn {
+  border: none;
+  background: none;
   color: var(--color33);
+  cursor: pointer;
   transition: color .3s;
 }
 
-.section-work__link:hover {
+.section-work__btn:hover {
   color: var(--colorHover);
 }
 
-.section-work__link:active {
+.section-work__btn:active {
   color: var(--colorActive);
 }
 
-.first__step__link {
+.section-work__btn-active {
   color: var(--colorHover);
 }
 
 .step-content {
+  display: none;
+}
+
+.step-content-active {
+  display: block;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -391,7 +478,7 @@ p{
   display: inline-block;
   margin-left: 2px;
   margin-right: 26px;
-  padding: 16px 38px 12px 38px;
+  padding: 21px 38px 21px 38px;
   border: none;
   font-weight: 700;
   color: var(--colorFF);
@@ -405,7 +492,7 @@ p{
 
 .step-content__contract {
   display: inline-block;
-  padding: 15px 37px 9px 37px;
+  padding: 21px 37px 17px 37px;
   color: var(--color33);
   border: 1px solid var(--color33);
   transition: background-color .3s;
@@ -429,42 +516,62 @@ p{
   object-fit: cover;
 }
 
-.step-content__image-768 {
-  display: none;
-}
-
 .section-FAQ__heading {
   margin-bottom: 38px;
 }
 
+.ui-accordion-header-icon,
+.ui-icon-triangle-1-e {
+ display: none !important;
+}
+
+.ui-accordion-header,
+.ui-corner-top,
+.ui-state-default,
+.ui-accordion-icons,
+.ui-accordion-header-collapsed,
+.ui-corner-all,
+.ui-accordion-header-active,
+.ui-state-active {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-style: normal !important;
+  color: var(--color33) !important;
+  background: none !important;
+  border: none !important;
+  outline: none !important;
+}
+
 .section-FAQ__item {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: start;
-  align-items: center;
-  margin-left: 5px;
-  height: 114px;
-  border-top: 1px solid var(--colorCA);
-  border-bottom: 1px solid var(--colorCA);
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  justify-content: start !important;
+  align-items: center !important;
+  margin-left: 5px !important;
+  height: 114px !important;
+  border-top: 1px solid var(--colorCA) !important;
+  border-bottom: 1px solid var(--colorCA) !important;
   cursor: pointer;
-  transition: color .3s, border-top .3s, border-bottom .3s;
+  transition: color .3s, border-top .3s, border-bottom .3s !important;
 }
 
 .section-FAQ__item:hover {
-  color: var(--colorHover);
-  border-top: 1px solid var(--colorHover);
-  border-bottom: 1px solid var(--colorHover);
+  color: var(--colorHover) !important;
+  border-top: 1px solid var(--colorHover) !important;
+  border-bottom: 1px solid var(--colorHover) !important;
 }
 
 .section-FAQ__item:hover .section-FAQ__item__button {
-  background: url(../img/+х-hover.svg) no-repeat right;
+  background: url(../img/+х-hover.svg) no-repeat right !important;
 }
 
 .section-FAQ__item__text {
-  margin: auto 0;
-  font-weight: 700;
-  font-size: 24px;
+  margin: auto 0 !important;
+  font-weight: 700 !important;
+  font-size: 24px !important;
+  background: none !important;
 }
 
 .section-FAQ__item__text-br-320,
@@ -484,7 +591,11 @@ p{
   border: none;
   cursor: pointer;
   background: url(../img/+х.svg) no-repeat right;
-  transition: background .3s;
+  transition: background .3s, transform .3s;
+}
+
+.section-FAQ__item__button-active {
+  transform: rotate(45deg);
 }
 
 .footer {
@@ -642,6 +753,10 @@ p{
   .nav-list__item-reviews {
     margin-right: 30px;
   }
+
+  .hero__text {
+    padding: 50px 42px 114px 45px;
+  }
   
   .section-about__cards {
     flex-direction: column;
@@ -683,6 +798,64 @@ p{
 }
 
 @media (max-width: 1024px) {
+  .menu__is-active {
+    transform: none;
+  }
+
+  .menu__cross-btn {
+    margin-bottom: 93px;
+    background: none;
+    border: none;
+    outline: none;
+  }
+
+  .menu__cross-img {
+    display: block;
+    width: 30px;
+  }
+
+  .cross__rect-1,
+  .cross__rect-2 {
+    transition: fill .3s;
+  }
+
+  .menu__cross-img:hover .cross__rect-1,
+  .menu__cross-img:hover .cross__rect-2 {
+    fill: var(--colorHover);
+  }
+
+  .menu__cross-img:active .cross__rect-1,
+  .menu__cross-img:active .cross__rect-2 {
+    fill: var(--colorActive);
+  }
+
+  .menu__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .menu__item:not(:last-child) {
+    margin-bottom: 77px;
+  }
+
+  .menu__link {
+    color: var(--color33);
+    transition: color .3s, border-bottom .3s;
+  }
+
+  .menu__link:hover {
+    border-bottom: 1px solid var(--colorHover);
+  }
+
+  .menu__link:active {
+    color: var(--colorActive);
+    border-bottom: 1px solid var(--colorActive);
+  }
+
   .container {
     padding: 0 50px;
     max-width: 1024px;
@@ -700,15 +873,11 @@ p{
     background: none;
   }
 
-  .header__burger:focus {
-    outline: none;
-  }
-
   .burger__rect-1,
   .burger__rect-2,
   .burger__rect-3 {
     fill: var(--color33);
-    transition: fill 0.3s, transform 0.3s, width 0.3s;
+    transition: fill .3s, transform .3s, width .3s;
   }
 
   .header__burger:hover .burger__rect-1 {
@@ -759,10 +928,27 @@ p{
     color: var(--colorActive);
   }
 
+  .swiper-container {
+    height: 668px;
+  }
+
   .hero__image-container {
-    padding: 160px 42px 114px 45px;
-    background: url(../img/1024/low-angle-photo-of-balconies.png) no-repeat center;
+    background: url(../img/1024/hero-1.png) no-repeat center;
     background-size: cover;
+  }
+
+  .hero__image-container-2 {
+    background: url(../img/1024/hero-2.jpg) no-repeat center;
+    background-size: cover;
+  }
+
+  .hero__image-container-3 {
+    background: url(../img/1024/hero-3.jpg) no-repeat center;
+    background-size: cover;
+  }
+
+  .hero__text {
+    padding: 160px 42px 114px 45px;
   }
 
   .hero__heading {
@@ -860,8 +1046,8 @@ p{
   }
 
   .section-FAQ__item__text {
-    margin: 37px 0;
-    font-size: 20px;
+    margin: 37px 0 !important;
+    font-size: 20px !important;
   }
 
   .section-FAQ__item__text__m-30 {
@@ -917,6 +1103,10 @@ p{
 }
 
 @media (max-width: 970px) {
+  .hero__text {
+    padding: 100px 0 114px 49px;
+  }
+  
   .section-about__more__image-text {
     margin-right: 30px;
   }
@@ -949,10 +1139,27 @@ p{
     padding: 0;
   }
 
+  .swiper-container {
+    height: 699px;
+  }
+
   .hero__image-container {
-    padding: 190px 0 114px 49px;
-    background: url(../img/768/low-angle-photo-of-balconies-2462015.jpg) no-repeat center;
+    background: url(../img/768/hero-1.jpg) no-repeat center;
     background-size: cover;
+  }
+
+  .hero__image-container-2 {
+    background: url(../img/768/hero-2.jpg) no-repeat center;
+    background-size: cover;
+  }
+
+  .hero__image-container-3 {
+    background: url(../img/768/hero-3.jpg) no-repeat center;
+    background-size: cover;
+  }
+
+  .hero__text {
+    padding: 190px 0 114px 49px;
   }
 
   .section-about__more {
@@ -997,12 +1204,12 @@ p{
     margin: 0;
   }
 
-  .step-content__image {
-    display: none;
+  .step-content-active {
+    flex-direction: column-reverse;
   }
 
-  .step-content__image-768 {
-    display: block;
+  .step-content__image {
+    margin-top: 0;
     margin-bottom: 28px;
   }
 
@@ -1063,7 +1270,7 @@ p{
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 704px) {
   html {
     font-size: 14px;
     line-height: 28px;
@@ -1204,10 +1411,10 @@ p{
   }
 
   .section-FAQ__item__text {
-    margin: 30px 0;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 24px;
+    margin: 30px 0 !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    line-height: 24px !important;
   }
 
   .footer__input-name,
@@ -1218,6 +1425,27 @@ p{
 }
 
 @media (max-width: 320px) {
+  .burger__menu {
+    padding: 15px 15px 0 15px;
+    width: 320px;
+    height: 307px;
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  .menu__cross-btn {
+    margin-bottom: 20px;
+  }
+
+  .menu__list {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .menu__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
   .container {
     max-width: 320px;
     padding: 0 15px;
@@ -1278,11 +1506,28 @@ p{
     padding: 0 15px;
   }
 
+  .swiper-container {
+    height: 262px;
+  }
+
   .hero__image-container {
+    background: url(../img/320/hero-1.jpg) no-repeat center;
+    background-size: cover;
+  }
+
+  .hero__image-container-2 {
+    background: url(../img/320/hero-2.jpg) no-repeat center;
+    background-size: cover;
+  }
+
+  .hero__image-container-3 {
+    background: url(../img/320/hero-3.jpg) no-repeat center;
+    background-size: cover;
+  }
+
+  .hero__text {
     padding: 32px 21px 40px 22px;
     text-align: center;
-    background: url(../img/320/low-angle-photo-of-balconies-2462015.jpg) no-repeat center;
-    background-size: cover;
   }
 
   .section-about {
@@ -1306,10 +1551,6 @@ p{
     margin-bottom: 10px;
   }
 
-  .step-content__image-768 {
-    margin-bottom: 0px;
-  }
-
   .step-content__heading {
     margin-bottom: 0;
     font-weight: 500;
@@ -1319,6 +1560,10 @@ p{
 
   .step-content__description {
     margin-bottom: 18px;
+  }
+
+  .step-content__image {
+    margin-bottom: 0;
   }
 
   .section-FAQ {
@@ -1335,17 +1580,13 @@ p{
   }
 
   .section-FAQ__item:hover .section-FAQ__item__button {
-    background: url(../img/320/+х-hover.svg) no-repeat center;
+    background: url(../img/320/+х-hover.svg) no-repeat center !important;
   }
 
   .section-FAQ__item__button {
-    min-width: 30px;
-    min-height: 30px;
-    background-size: contain;
-  }
-
-  .section-FAQ__item__button:focus {
-    outline: none;
+    min-width: 30px !important;
+    min-height: 30px !important;
+    background-size: contain !important;
   }
 
   .section-FAQ__item__text-br-768,

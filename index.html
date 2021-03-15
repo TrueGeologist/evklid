@@ -14,9 +14,65 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Подключение свайпера -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Подключение табов -->
+    <script defer src="index.js"></script>
+
+    <!-- Подключение аккордеона jqueryui.com -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $( function() {
+        $( "#accordion" ).accordion({
+          collapsible: true
+        });
+      } );
+    </script>
   </head>
 
   <body>
+    <div id="menu" class="burger__menu">
+      <button class="menu__cross-btn">
+        <svg class="menu__cross-img" width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect class="cross__rect-1" x="2.09094" width="29.5699" height="2.95699" transform="rotate(45 2.09094 0)" fill="#333333"/>
+          <rect class="cross__rect-2" y="20.9091" width="29.5699" height="2.95699" transform="rotate(-45 0 20.9091)" fill="#333333"/>
+        </svg>
+      </button>
+
+      <nav id="menu__nav" class="menu__nav">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#">О нас</a>
+          </li>
+  
+          <li class="menu__item">
+            <a class="menu__link" href="#">Проекты</a>
+          </li>
+  
+          <li class="menu__item">
+            <a class="menu__link" href="#">Этапы</a>
+          </li>
+  
+          <li class="menu__item">
+            <a class="menu__link" href="#">Отзывы</a>
+          </li>
+  
+          <li class="menu__item">
+            <a class="menu__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
     <header class="header">
       <div class="container header__container">
         <button class="header__burger" type="button">
@@ -59,7 +115,7 @@
 
             <li>
               <a href="#" class="nav-list__item__search-logo nav-list__link">
-                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="26" height="26" viewbox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="19.5138" y="18.5495" width="8" height="2" transform="rotate(45 19.5138 18.5495)" fill="currentColor"/>
                   <circle cx="11.5" cy="11.5" r="10.5" stroke="currentColor" stroke-width="2"/>
                 </svg>
@@ -69,7 +125,7 @@
         </nav>
 
         <a href="#" class="nav-list__item__search-logo-1024">
-          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="26" height="26" viewbox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="19.5138" y="18.5495" width="8" height="2" transform="rotate(45 19.5138 18.5495)" fill="currentColor"/>
             <circle cx="11.5" cy="11.5" r="10.5" stroke="currentColor" stroke-width="2"/>
           </svg>
@@ -80,22 +136,40 @@
     <main>
       <section class="section-hero">
         <div class="container hero__container">
-          <div class="hero__image-container">
-            <h1 class="hero__heading">
-              Проектные решения
-              <br>
-              любой сложности
-            </h1>
+          <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide hero__image-container"></div>
 
-            <p class="hero__content">
-              Есть над чем задуматься: базовые сценарии поведения
-              <br>
-              пользователей и по сей день остаются уделом проектантов
-            </p>
+              <div class="swiper-slide hero__image-container-2"></div>
 
-            <a class="hero__button" href="#">
-              Заказать расчёт
-            </a>
+              <div class="swiper-slide hero__image-container-3"></div>
+            </div>
+
+            <div class="hero__text">
+              <h1 class="hero__heading">
+                Проектные решения
+                <br>
+                любой сложности
+              </h1>
+
+              <p class="hero__content">
+                Есть над чем задуматься: базовые сценарии поведения
+                <br>
+                пользователей и по сей день остаются уделом проектантов
+              </p>
+
+              <button class="hero__button" type="button">
+                Заказать расчёт
+              </button>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
         </div>
       </section>
@@ -168,29 +242,23 @@
 
           <ul class="section-work__list">
             <li class="section-work__item">
-              <a class="section-work__link first__step__link" href="#">1 шаг</a>
+              <button class="section-work__btn section-work__btn-active" type="button" data-path="one">1 шаг</button>
             </li>
 
             <li class="section-work__item">
-              <a class="section-work__link" href="#">2 шаг</a>
+              <button class="section-work__btn" type="button" data-path="two">2 шаг</button>
             </li>
 
             <li class="section-work__item">
-              <a class="section-work__link" href="#">3 шаг</a>
+              <button class="section-work__btn" type="button" data-path="three">3 шаг</button>
             </li>
 
             <li class="section-work__item">
-              <a class="section-work__link" href="#">4 шаг</a>
+              <button class="section-work__btn" type="button" data-path="four">4 шаг</button>
             </li>
           </ul>
 
-          <picture class="step-content__image-768">
-            <source class="step-content__image-320" srcset="./img/320/Rectangle-18.png" media="(max-width: 320px)">
-            <source srcset="./img/768/Rectangle18.jpg" media="(max-width: 768px)">
-            <img class="step-content__image-1920" src="./img/Rectangle-18.jpg" alt="Фотография стола с двумя ноутбуками и листками, на которых что-то пишут два мужчины">
-          </picture>
-
-          <div class="step-content">
+          <div class="step-content step-content-active" data-target="one">
             <div class="step-content__text">
               <h2 class="step-content__heading">
                 Проводим консультацию
@@ -201,19 +269,108 @@
               </p>
 
               <div class="step-content__buttons">
-                <a class="step-content__more" href="">
+                <button class="step-content__more" type="button">
                   Подробнее
-                </a>
+                </button>
     
-                <a class="step-content__contract" href="">
+                <button class="step-content__contract" type="button">
                   Договор
-                </a>
+                </button>
               </div>
             </div>
 
             <picture class="step-content__image">
-              <source class="step-content__image-1024" srcset="./img/1024/Rectangle-18.png" media="(max-width: 1350px)">
-              <img class="step-content__image-1920" src="./img/Rectangle-18.jpg" alt="Фотография стола с двумя ноутбуками и листками, на которых что-то пишут два мужчины">
+              <source class="step-content__image-320" srcset="./img/320/first-step.png" media="(max-width: 320px)">
+              <source srcset="./img/768/first-step.jpg" media="(max-width: 768px)">
+              <source class="step-content__image-1024" srcset="./img/1024/first-step.png" media="(max-width: 1350px)">
+              <img class="step-content__image-1920" src="./img/first-step.jpg" alt="Фотография стола с двумя ноутбуками и листками, на которых что-то пишут два мужчины">
+            </picture>
+          </div>
+
+          <div class="step-content" data-target="two">
+            <div class="step-content__text">
+              <h2 class="step-content__heading">
+                Составляем смету
+              </h2>
+    
+              <p class="step-content__description">
+                Внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований.
+              </p>
+
+              <div class="step-content__buttons">
+                <button class="step-content__more" type="button">
+                  Подробнее
+                </button>
+    
+                <button class="step-content__contract" type="button">
+                  Договор
+                </button>
+              </div>
+            </div>
+
+            <picture class="step-content__image">
+              <source class="step-content__image-320" srcset="./img/320/second-step.jpg" media="(max-width: 320px)">
+              <source srcset="./img/768/second-step.jpg" media="(max-width: 768px)">
+              <source class="step-content__image-1024" srcset="./img/1024/second-step.jpg" media="(max-width: 1350px)">
+              <img class="step-content__image-1920" src="./img/second-step.jpg" alt="Фотография стола с двумя ноутбуками и листками, на которых что-то пишут два мужчины">
+            </picture>
+          </div>
+
+          <div class="step-content" data-target="three">
+            <div class="step-content__text">
+              <h2 class="step-content__heading">
+                Привлекаем подрядчиков
+              </h2>
+    
+              <p class="step-content__description">
+                Идейные соображения высшего порядка, а также новая модель организационной деятельности требует анализа прогресса профессионального сообщества. Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит о возможностях системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнить важные задания по разработке прогресса профессионального сообщества.
+              </p>
+
+              <div class="step-content__buttons">
+                <button class="step-content__more" type="button">
+                  Подробнее
+                </button>
+    
+                <button class="step-content__contract" type="button">
+                  Договор
+                </button>
+              </div>
+            </div>
+
+            <picture class="step-content__image">
+              <source class="step-content__image-320" srcset="./img/320/third-step.jpg" media="(max-width: 320px)">
+              <source srcset="./img/768/third-step.jpg" media="(max-width: 768px)">
+              <source class="step-content__image-1024" srcset="./img/1024/third-step.jpg" media="(max-width: 1350px)">
+              <img class="step-content__image-1920" src="./img/third-step.jpg" alt="Фотография стола с двумя ноутбуками и листками, на которых что-то пишут два мужчины">
+            </picture>
+          </div>
+
+          <div class="step-content" data-target="four">
+            <div class="step-content__text">
+              <h2 class="step-content__heading">
+                Инспектируем все этапы работ
+              </h2>
+    
+              <p class="step-content__description">
+                Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит о возможностях системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет.
+              </p>
+
+              <div class="step-content__buttons">
+                <button class="step-content__more" type="button">
+                  Подробнее
+                </button>
+    
+                <button class="step-content__contract" type="button">
+                  Договор
+                </button>
+              </div>
+            </div>
+
+            <picture class="step-content__image">
+              <source class="step-content__image-320" srcset="./img/320/fourth-step.jpg" media="(max-width: 320px)">
+              <source srcset="./img/768/fourth-step.jpg" media="(max-width: 768px)">
+              <source class="step-content__image-1024" srcset="./img/1024/fourth-step.jpg" media="(max-width: 1350px)">
+              <img class="step-content__image-1920" src="./img/fourth-step.jpg" alt="Фотография стола с двумя ноутбуками и листками, на которых что-то пишут два мужчины">
             </picture>
           </div>
         </div>
@@ -225,67 +382,95 @@
             Часто задаваемые вопросы
           </h2>
 
-          <ul class="section-FAQ__list">
-            <li class="section-FAQ__item">
-              <div class="section-FAQ__item__text">
-                Из чего формируется 
-                <br class="section-FAQ__item__text-br-320">
-                конечная стоимость проекта?
-              </div>
+          <div id="accordion" class="section-FAQ__list">
+            <h3 class="section-FAQ__item section-FAQ__item__text">
+              Из чего формируется 
+              <br class="section-FAQ__item__text-br-320">
+              конечная стоимость проекта?
+
+              <button class="section-FAQ__item__button section-FAQ__item__button-active"></button>
+            </h3>
+            
+            <div>
+              <p>
+                Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас к новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы. Но высококачественный прототип будущего проекта является качественно новой ступенью первоочередных требований. А ещё некоторые особенности внутренней политики, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. И нет сомнений, что явные признаки победы институционализации призывают нас к новым свершениям, которые, в свою очередь, должны быть указаны как претенденты на роль ключевых факторов.
+              </p>
+              <br>
+              <p>
+                Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к ответу. Явные признаки победы институционализации набирают популярность среди определенных слоев населения, а значит, должны быть объединены в целые кластеры себе подобных. Банальные, но неопровержимые выводы, а также многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть представлены в исключительно положительном свете. 
+              </p>
+            </div>
+
+            <h3 class="section-FAQ__item section-FAQ__item__text section-FAQ__item__text__m-30">
+              У меня есть свой проект. 
+              <br class="section-FAQ__item__text-br-320">
+              Сможем ли мы его 
+              <br class="section-FAQ__item__text-br-768 section-FAQ__item__text-br-320">
+              доработать 
+              <span class="slash">/</span> 
+              <br class="section-FAQ__item__text-br-1024">
+              реализовать?
 
               <button class="section-FAQ__item__button"></button>
-            </li>
+            </h3>
+            
+            <div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur porro natus, voluptates omnis, quaerat esse necessitatibus laudantium laboriosam est corporis provident ex, earum quae nobis rerum perferendis quam numquam. Aspernatur.
+                Itaque asperiores reprehenderit impedit id rem laborum quia error necessitatibus dolores consequatur! Vitae culpa tempora ab minima at. Ipsum, esse. Voluptatum sit magni necessitatibus quo commodi fuga debitis esse aspernatur.
+              </p>
+            </div>
 
-            <li class="section-FAQ__item">
-              <div class="section-FAQ__item__text section-FAQ__item__text__m-30">
-                У меня есть свой проект. 
-                <br class="section-FAQ__item__text-br-320">
-                Сможем ли мы его 
-                <br class="section-FAQ__item__text-br-768 section-FAQ__item__text-br-320">
-                доработать 
-                <span class="slash">/</span> 
-                <br class="section-FAQ__item__text-br-1024">
-                реализовать?
-              </div>
-
-              <button class="section-FAQ__item__button" type="button"></button>
-            </li>
-
-            <li class="section-FAQ__item">
-              <div class="section-FAQ__item__text">
-                Я выбираю между разными компаниями. 
-                <br class="section-FAQ__item__text-br-768">
-                В чём ваше 
-                <br class="section-FAQ__item__text-br-320">
-                отличие?
-              </div>
+            <h3 class="section-FAQ__item section-FAQ__item__text">
+              Я выбираю между разными компаниями. 
+              <br class="section-FAQ__item__text-br-768">
+              В чём ваше 
+              <br class="section-FAQ__item__text-br-320">
+              отличие?
 
               <button class="section-FAQ__item__button"></button>
-            </li>
+            </h3>
+            
+            <div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur porro natus, voluptates omnis, quaerat esse necessitatibus laudantium laboriosam est corporis provident ex, earum quae nobis rerum perferendis quam numquam. Aspernatur.
+                Itaque asperiores reprehenderit impedit id rem laborum quia error necessitatibus dolores consequatur! Vitae culpa tempora ab minima at. Ipsum, esse. Voluptatum sit magni necessitatibus quo commodi fuga debitis esse aspernatur.
+              </p>
+            </div>
 
-            <li class="section-FAQ__item">
-              <div class="section-FAQ__item__text section-FAQ__item__text__m-30">
-                Могу ли я делегировать вам работу 
-                <span class="slash">/</span> 
-                <br class="section-FAQ__item__text-br-768">
-                согласование с подрядчиком 
-                <span class="slash">/</span> 
-                организацией? 
-              </div>
-
-              <button class="section-FAQ__item__button"></button>
-            </li>
-
-            <li class="section-FAQ__item">
-              <div class="section-FAQ__item__text">
-                Могу ли я вернуть деньги на каком-либо из 
-                <br class="section-FAQ__item__text-br-768">
-                этапов работ?
-              </div>
+            <h3 class="section-FAQ__item section-FAQ__item__text section-FAQ__item__text__m-30">
+              Могу ли я делегировать вам работу 
+              <span class="slash">/</span> 
+              <br class="section-FAQ__item__text-br-768">
+              согласование с подрядчиком 
+              <span class="slash">/</span> 
+              организацией?
 
               <button class="section-FAQ__item__button"></button>
-            </li>
-          </ul>
+            </h3>
+            
+            <div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur porro natus, voluptates omnis, quaerat esse necessitatibus laudantium laboriosam est corporis provident ex, earum quae nobis rerum perferendis quam numquam. Aspernatur.
+                Itaque asperiores reprehenderit impedit id rem laborum quia error necessitatibus dolores consequatur! Vitae culpa tempora ab minima at. Ipsum, esse. Voluptatum sit magni necessitatibus quo commodi fuga debitis esse aspernatur.
+              </p>
+            </div>
+
+            <h3 class="section-FAQ__item section-FAQ__item__text">
+              Могу ли я вернуть деньги на каком-либо из 
+              <br class="section-FAQ__item__text-br-768">
+              этапов работ?
+
+              <button class="section-FAQ__item__button"></button>
+            </h3>
+            
+            <div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur porro natus, voluptates omnis, quaerat esse necessitatibus laudantium laboriosam est corporis provident ex, earum quae nobis rerum perferendis quam numquam. Aspernatur.
+                Itaque asperiores reprehenderit impedit id rem laborum quia error necessitatibus dolores consequatur! Vitae culpa tempora ab minima at. Ipsum, esse. Voluptatum sit magni necessitatibus quo commodi fuga debitis esse aspernatur.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -375,6 +560,32 @@
           </div>
        </div>
       </footer>
+
+      <!-- Скрипт для свайпера с https://swiperjs.com/get-started -->
+      <script>
+        const swiper = new Swiper('.swiper-container', {
+          // Optional parameters
+          direction: 'horizontal',
+          loop: true,
+
+          // If we need pagination
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+
+          //If we need autoplay
+          autoplay: {
+            delay: 5000,
+          },
+
+          // Navigation arrows
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      </script>
     </main>
   </body>
 </html>
