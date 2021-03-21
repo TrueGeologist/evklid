@@ -40,8 +40,8 @@
   </head>
 
   <body>
-    <div id="menu" class="burger__menu">
-      <button class="menu__cross-btn">
+    <div id="menu" class="burger__menu" aria-hidden="true">
+      <button class="menu__cross-btn" aria-label="Закрыть меню">
         <svg class="menu__cross-img" width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect class="cross__rect-1" x="2.09094" width="29.5699" height="2.95699" transform="rotate(45 2.09094 0)" fill="#333333"/>
           <rect class="cross__rect-2" y="20.9091" width="29.5699" height="2.95699" transform="rotate(-45 0 20.9091)" fill="#333333"/>
@@ -75,7 +75,7 @@
 
     <header class="header">
       <div class="container header__container">
-        <button class="header__burger" type="button">
+        <button class="header__burger" type="button" aria-label="Открыть меню">
           <svg class="header__burger-img" width="30" height="23" viewbox="0 0 30 23" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect class="burger__rect-1" width="30" height="3"/>
             <rect class="burger__rect-2" y="10" width="30" height="3"/>
@@ -114,7 +114,7 @@
             </li>
 
             <li>
-              <a href="#" class="nav-list__item__search-logo nav-list__link">
+              <a href="#" class="nav-list__item__search-logo nav-list__link" aria-label="Поиск по сайту">
                 <svg width="26" height="26" viewbox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="19.5138" y="18.5495" width="8" height="2" transform="rotate(45 19.5138 18.5495)" fill="currentColor"/>
                   <circle cx="11.5" cy="11.5" r="10.5" stroke="currentColor" stroke-width="2"/>
@@ -124,7 +124,7 @@
           </ul>
         </nav>
 
-        <a href="#" class="nav-list__item__search-logo-1024">
+        <a href="#" class="nav-list__item__search-logo-1024" aria-label="Поиск по сайту">
           <svg width="26" height="26" viewbox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="19.5138" y="18.5495" width="8" height="2" transform="rotate(45 19.5138 18.5495)" fill="currentColor"/>
             <circle cx="11.5" cy="11.5" r="10.5" stroke="currentColor" stroke-width="2"/>
@@ -376,7 +376,7 @@
         </div>
       </section>
 
-      <section class="section-FAQ">
+      <section class="section-FAQ" id="section-FAQ">
         <div class="container section-FAQ__container">
           <h2 class="section-FAQ__heading">
             Часто задаваемые вопросы
@@ -522,9 +522,9 @@
             </nav>
 
             <div class="footer__social">
-              <a class="facebook-link footer__social-icon" href="#"></a>
-              <a class="vk-link footer__social-icon" href="#"></a>
-              <a class="insta-link footer__social-icon" href="#"></a>
+              <a class="facebook-link footer__social-icon" href="#"  aria-label="Перейти в группу Фейсбук"></a>
+              <a class="vk-link footer__social-icon" href="#" aria-label="Перейти в группу Вконтакте"></a>
+              <a class="insta-link footer__social-icon" href="#" aria-label="Перейти на страницу Инстаграм"></a>
             </div>
           </div>
 
@@ -563,9 +563,9 @@
             </picture>
 
             <div class="footer__social">
-              <a class="facebook-link footer__social-icon" href="#"></a>
-              <a class="vk-link footer__social-icon" href="#"></a>
-              <a class="insta-link footer__social-icon" href="#"></a>
+              <a class="facebook-link footer__social-icon" href="#" aria-label="Перейти в группу Фейсбук"></a>
+              <a class="vk-link footer__social-icon" href="#" aria-label="Перейти в группу Вконтакте"></a>
+              <a class="insta-link footer__social-icon" href="#" aria-label="Перейти на страницу Инстаграм"></a>
             </div>
           </div>
        </div>

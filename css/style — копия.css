@@ -539,36 +539,36 @@ button {
   border: none;
 }
 
-#section-FAQ .section-FAQ__item {
+.section-FAQ__item {
   display: flex !important;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 5px;
-  height: 114px;
-  border-top: 1px solid var(--colorCA);
-  border-bottom: 1px solid var(--colorCA);
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  justify-content: start !important;
+  align-items: center !important;
+  margin-left: 5px !important;
+  height: 114px !important;
+  border-top: 1px solid var(--colorCA) !important;
+  border-bottom: 1px solid var(--colorCA) !important;
   cursor: pointer;
-  transition: color .3s, border-top .3s, border-bottom .3s;
+  transition: color .3s, border-top .3s, border-bottom .3s !important;
 }
 
 .section-FAQ__item:hover {
-  color: var(--colorHover);
-  border-top: 1px solid var(--colorHover);
-  border-bottom: 1px solid var(--colorHover);
+  color: var(--colorHover) !important;
+  border-top: 1px solid var(--colorHover) !important;
+  border-bottom: 1px solid var(--colorHover) !important;
 }
 
-#section-FAQ .section-FAQ__item:hover .section-FAQ__item__button {
-  background: url(../img/+х-hover.svg) no-repeat center;
+.section-FAQ__item:hover .section-FAQ__item__button {
+  background: url(../img/+х-hover.svg) no-repeat right !important;
 }
 
-#section-FAQ .section-FAQ__item__text {
+.section-FAQ__item__text {
   display: inline-block;
-  margin: auto 0;
-  font-weight: 700;
-  font-size: 24px;
-  background: none;
+  margin: auto 0 !important;
+  font-weight: 700 !important;
+  font-size: 24px !important;
+  background: none !important;
 }
 
 .section-FAQ__item__text-br-320,
@@ -1036,16 +1036,16 @@ button {
     margin-top: 39px;
   }
 
-  #section-FAQ .section-FAQ__item {
-    margin-left: 0;
-    height: unset;
-    min-height: 110px;
-    max-height: 124px;
+  .section-FAQ__item {
+    margin-left: 0 !important;
+    height: unset !important;
+    min-height: 110px !important;
+    max-height: 124px !important;
   }
 
-  #section-FAQ .section-FAQ__item__text {
-    padding: 37px 0;
-    font-size: 20px;
+  .section-FAQ__item__text {
+    padding: 37px 0 !important;
+    font-size: 20px !important;
   }
 
   .section-FAQ__item__text__m-30 {
@@ -1408,11 +1408,11 @@ button {
     padding: 10px 31px 12px 32px;
   }
 
-  #section-FAQ .section-FAQ__item__text {
-    padding: 30px 0;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 24px;
+  .section-FAQ__item__text {
+    padding: 30px 0 !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    line-height: 24px !important;
   }
 
   .footer__container {
@@ -1576,19 +1576,19 @@ button {
     margin-bottom: 10px;
   }
 
-  #section-FAQ .section-FAQ__item {
-    min-height: unset;
-    max-height: unset;
+  .section-FAQ__item {
+    min-height: unset !important;
+    max-height: unset !important;
   }
 
-  #section-FAQ .section-FAQ__item:hover .section-FAQ__item__button {
-    background: url(../img/320/+х-hover.svg) no-repeat center;
+  .section-FAQ__item:hover .section-FAQ__item__button {
+    background: url(../img/320/+х-hover.svg) no-repeat center !important;
   }
 
-  #section-FAQ .section-FAQ__item__button {
-    min-width: 30px;
-    min-height: 30px;
-    background-size: contain;
+  .section-FAQ__item__button {
+    min-width: 30px !important;
+    min-height: 30px !important;
+    background-size: contain !important;
   }
 
   .section-FAQ__item__text-br-768,

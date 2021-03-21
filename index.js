@@ -1,5 +1,5 @@
 (() => {
-    let headerBurgerImg = document.querySelector('.header__burger-img');
+    let headerBurger = document.querySelector('.header__burger');
     let headerCross = document.querySelector('.menu__cross-btn');
     let menu = document.querySelector('#menu');
 
@@ -26,12 +26,28 @@
         });
 
         //Бургер-меню
-        headerBurgerImg.addEventListener('click', () => {
+        headerBurger.addEventListener('click', () => {
             menu.classList.add('menu__is-active');
+            menu.ariaHidden = "false";
         });
 
         headerCross.addEventListener('click', () => {
             menu.classList.remove('menu__is-active');
+            menu.ariaHidden = "true";
+        });
+
+        headerBurger.addEventListener('keydown', ev => {
+            if (ev.code == "Space" || ev.code == "Enter") {
+                menu.classList.add('menu__is-active');
+                menu.ariaHidden = "false";
+            }
+        });
+
+        headerCross.addEventListener('keydown', ev => {
+            if (ev.code == "Space" || ev.code == "Enter") {
+                menu.classList.remove('menu__is-active');
+                menu.ariaHidden = "true";
+            }
         });
 
         //Поворот кнопки аккордеона
@@ -45,7 +61,7 @@
 
                 activeItem.querySelector('.section-FAQ__item__button').classList.add('section-FAQ__item__button-active');
 
-                console.log(activeItem.querySelector('.section-FAQ__item__button-active').classList);
+                // console.log(activeItem.querySelector('.section-FAQ__item__button-active').classList);
             });
         });
     });
