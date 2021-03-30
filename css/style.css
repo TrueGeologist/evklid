@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 1 version
+*/
+
 :root {
   --color33: #333333;
   --colorE5: #E5E5E5;
@@ -95,8 +102,11 @@ button {
   width: 420px;
   height: 768px;
   background: var(--colorFF);
+  transition: -webkit-transform .3s ease-in-out;
   transition: transform .3s ease-in-out;
-  transform: translateX(-101%);
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  -webkit-transform: translateX(-101%);
+          transform: translateX(-101%);
 }
 
 .header__logo {
@@ -506,11 +516,13 @@ button {
 
 .step-content__image {
   margin-top: 10px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .step-content__image-1920 {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .section-FAQ__heading {
@@ -589,11 +601,14 @@ button {
   border: none;
   cursor: pointer;
   background: url(../img/+х.svg) no-repeat right;
+  transition: background .3s, -webkit-transform .3s;
   transition: background .3s, transform .3s;
+  transition: background .3s, transform .3s, -webkit-transform .3s;
 }
 
 .section-FAQ__item__button-active {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .footer {
@@ -798,7 +813,8 @@ button {
 
 @media (max-width: 1024px) {
   .menu__is-active {
-    transform: none;
+    -webkit-transform: none;
+            transform: none;
   }
 
   .menu__cross-btn {
@@ -875,7 +891,9 @@ button {
   .burger__rect-2,
   .burger__rect-3 {
     fill: var(--color33);
+    transition: fill .3s, width .3s, -webkit-transform .3s;
     transition: fill .3s, transform .3s, width .3s;
+    transition: fill .3s, transform .3s, width .3s, -webkit-transform .3s;
   }
 
   .header__burger:hover .burger__rect-1 {
@@ -885,13 +903,15 @@ button {
   .header__burger:hover .burger__rect-2 {
     width: 25px;
     fill: var(--colorHover);
-    transform: translateX(5px);
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
   }
 
   .header__burger:hover .burger__rect-3 {
     width: 18px;
     fill: var(--colorHover);
-    transform: translateX(12px);
+    -webkit-transform: translateX(12px);
+            transform: translateX(12px);
   }
 
   .header__burger:active .burger__rect-1,
@@ -1029,7 +1049,8 @@ button {
   .step-content__image {
     display: block;
     margin-top: 10px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 
   .section-FAQ {
@@ -1482,25 +1503,30 @@ button {
   }
 
   .burger__rect-1 {
-    transform: translate(5px, 0);
+    -webkit-transform: translate(5px, 0);
+            transform: translate(5px, 0);
   }
 
   .burger__rect-2 {
-    transform: translate(5px, -2px);
+    -webkit-transform: translate(5px, -2px);
+            transform: translate(5px, -2px);
   }
 
   .burger__rect-3 {
-    transform: translate(5px, -4px);
+    -webkit-transform: translate(5px, -4px);
+            transform: translate(5px, -4px);
   }
 
   .header__burger:hover .burger__rect-2 {
     width: 20px;
-    transform: translate(10px, -2px);
+    -webkit-transform: translate(10px, -2px);
+            transform: translate(10px, -2px);
   }
 
   .header__burger:hover .burger__rect-3 {
     width: 13px;
-    transform: translate(18px, -4px);
+    -webkit-transform: translate(18px, -4px);
+            transform: translate(18px, -4px);
   }
 
   .section-hero .container {
